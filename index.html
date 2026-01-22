@@ -20,13 +20,13 @@
 <header class="top-nav">
   <nav>
     <button data-target="hero">About</button>
-    <button data-target="education">Education</button>
     <button data-target="experience">Experience</button>
+    <button data-target="education">Education</button>
     <button data-target="projects">Projects</button>
     <button data-target="papers">Research</button>
     <button data-target="skills">Skills</button>
-    <button data-target="certifications">Certifications</button>
     <button data-target="clubs">Activities</button>
+    <button data-target="certifications">Certifications</button>
     <button data-target="hobbies">Hobbies</button>
   </nav>
 </header>
@@ -35,75 +35,45 @@
 
 <!-- ABOUT -->
 <section id="hero" class="section visible">
+  <img src="images/profile.jpg" alt="Lokesh Reddy Vadde" class="profile-pic">
+
   <h1>Lokesh Reddy Vadde</h1>
   <h2 class="title-accent">Mechanical Engineer</h2>
+
   <p>
     Master’s student in Mechanical Engineering at the University of Cincinnati with hands-on experience in
     manufacturing, process optimization, and ADAS-focused vehicle control systems.
     I began my career on the shop floor solving real production problems and now work at the intersection of
     simulation, vehicle dynamics, and real-world validation to deliver reliable engineering solutions.
   </p>
-</section>
 
-<!-- EDUCATION -->
-<section id="education" class="section hidden">
-  <h3>Education</h3>
-  <div class="timeline">
-
-    <!-- University of Cincinnati -->
-    <div class="timeline-item">
-      <span class="timeline-date">Aug 2023 – Present</span>
-      <div class="timeline-content">
-        <strong>
-          <a href="https://www.uc.edu" target="_blank">University of Cincinnati</a>
-        </strong>
-        — M.S. Mechanical Engineering
-        <p>CGPA: <span class="highlight">3.83 / 4.0</span></p>
-        <p><strong>Focus Areas:</strong> Manufacturing Systems, Robotics, Quality Engineering, Design for Manufacturability & Assembly (DFMA)</p>
-        <p><strong>Relevant Learning:</strong> Advanced process optimization, production planning, industrial automation, lean manufacturing, statistical quality control, product design for manufacturability, robotics simulation and control, engineering project management.</p>
-      </div>
-    </div>
-
-    <!-- National Institute of Technology Rourkela -->
-    <div class="timeline-item">
-      <span class="timeline-date">Jul 2016 – Jun 2020</span>
-      <div class="timeline-content">
-        <strong>
-          <a href="https://nitrkl.ac.in" target="_blank">
-            National Institute of Technology Rourkela
-          </a>
-        </strong>
-        — B.Tech Mechanical Engineering
-        <p>CGPA: <span class="highlight">8.12 / 10.0</span></p>
-        <p><strong>Focus Areas:</strong> Core Mechanical Engineering, Materials, Thermodynamics, Manufacturing Processes, Fluid Mechanics, Control Systems</p>
-        <p><strong>Relevant Learning:</strong> Mechanical design, materials science, heat transfer, fluid dynamics, manufacturing process design, mechanical testing, project-based learning on hybrid composites and vehicle dynamics, simulation & CAD skills.</p>
-      </div>
-    </div>
-
+  <!-- ABOUT PAGE BUTTONS -->
+  <div class="hero-buttons">
+    <button data-target="experience">Experience</button>
+    <button data-target="education">Education</button>
+    <button data-target="projects">Projects</button>
+    <button data-target="papers">Research</button>
   </div>
 </section>
-
 
 <!-- EXPERIENCE -->
 <section id="experience" class="section hidden">
   <h3>Professional Experience</h3>
-  <div class="timeline">
 
+  <div class="timeline">
     <div class="timeline-item">
       <span class="timeline-date">Aug 2025 – Present</span>
       <div class="timeline-content">
         <strong>
-          <a href="https://www.bendix.com" target="_blank">
-            Bendix Commercial Vehicle Systems
-          </a>
+          <a href="https://www.bendix.com" target="_blank">Bendix Commercial Vehicle Systems</a>
         </strong>
         <p><em>Mechanical Engineering Co-op — ADAS</em></p>
         <ul>
-          <li>Led simulation and optimization of Lane Centering Assist (LCA) control parameters to reduce manual tuning effort.</li>
-          <li>Built a simulation-driven calibration workflow enabling faster controller iteration before vehicle testing.</li>
-          <li>Supported Lane Keeping Assist (LKA) development through vehicle dynamics analysis and control tuning.</li>
+          <li><strong>Hands-on vehicle testing and validation</strong> of Lane Centering Assist (LCA) and Lane Keeping Assist (LKA).</li>
+          <li>Led simulation-based optimization of LCA control parameters.</li>
+          <li>Built a simulation-driven calibration workflow.</li>
+          <li>Performed vehicle dynamics analysis to support controller tuning.</li>
           <li>Integrated LiDAR-based vehicle detection into ADAS architectures.</li>
-          <li>Validated ADAS performance using real-world vehicle test data.</li>
         </ul>
       </div>
     </div>
@@ -118,14 +88,46 @@
         </strong>
         <p><em>Assistant Manager — Steel Melting Shop</em></p>
         <ul>
-          <li>Managed plant maintenance to maximize equipment availability and production uptime.</li>
-          <li>Optimized manpower and machine utilization to improve throughput.</li>
+          <li><strong>Production environment leadership</strong> in a high-throughput steel manufacturing facility.</li>
+          <li>Managed <strong>20+ technicians and engineers</strong> across shifts.</li>
+          <li>Handled real-time production challenges, breakdowns, and manpower constraints.</li>
+          <li>Optimized equipment and manpower utilization to improve throughput.</li>
           <li>Redesigned Argon purging system, reducing downtime and operating cost.</li>
-          <li>Awarded the <strong>Kaizen Innovation Award</strong> for continuous improvement initiatives.</li>
+          <li>Awarded the <strong>Kaizen Innovation Award</strong>.</li>
         </ul>
       </div>
     </div>
+  </div>
+</section>
 
+<!-- EDUCATION -->
+<section id="education" class="section hidden">
+  <h3>Education</h3>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-date">Aug 2023 – Present</span>
+      <div class="timeline-content">
+        <strong><a href="https://www.uc.edu" target="_blank">University of Cincinnati</a></strong>
+        — M.S. Mechanical Engineering
+        <p>CGPA: <span class="highlight">3.83 / 4.0</span></p>
+        
+        <p><strong>Focus Areas:</strong> Manufacturing Systems, Robotics, Quality Engineering, Design for Manufacturability & Assembly (DFMA)</p>
+        <p><strong>Relevant Learning:</strong> Advanced process optimization, production planning, industrial automation, lean manufacturing, statistical quality control, product design for manufacturability, robotics simulation and control, engineering project management.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-date">Jul 2016 – Jun 2020</span>
+      <div class="timeline-content">
+        <strong><a href="https://nitrkl.ac.in" target="_blank">National Institute of Technology Rourkela</a></strong>
+        — B.Tech Mechanical Engineering
+        <p>CGPA: <span class="highlight">8.12 / 10.0</span></p>
+              <p><strong>Focus Areas:</strong> Core Mechanical Engineering, Materials, Thermodynamics, Manufacturing Processes, Fluid Mechanics, Control Systems</p>
+        <p><strong>Relevant Learning:</strong> Mechanical design, materials science, heat transfer, fluid dynamics, manufacturing process design, mechanical testing, project-based learning on hybrid composites and vehicle dynamics, simulation & CAD skills.</p>
+        <p><strong>Extracurricular:</strong> Formula Student (Road Runner Racing), Aeromodelling Club, Technical Society.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -165,7 +167,7 @@
 <!-- RESEARCH -->
 <section id="papers" class="section hidden">
   <h3>Research & Publications</h3>
-  <ul>
+ <ul>
     <li>
       <strong>A novel surface polishing method for metal surfaces using corona discharges</strong> — Submitted to NAMRC, 2026
       <ul>
@@ -189,12 +191,13 @@
         <li><em>Measured vibration exposure across different road conditions.</em></li>
       </ul>
     </li>
-  </ul>
+  </ul> 
 </section>
 
-<!-- EXTRACURRICULAR -->
+<!-- ACTIVITIES -->
 <section id="clubs" class="section hidden">
   <h3>Extracurricular & Leadership</h3>
+ <h3>Extracurricular & Leadership</h3>
   <ul>
     <li>
       <strong>
@@ -243,12 +246,13 @@
       </ul>
     </li>
   </ul>
+ 
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="section hidden">
   <h3>Skills & Strengths</h3>
-  <ul>
+ <ul>
     <li><strong>Manufacturing & Quality:</strong> Process optimization, Lean, Six Sigma, 5S, Kaizen</li>
     <li><strong>ADAS & Automotive:</strong> Vehicle dynamics, control calibration, simulation-driven validation</li>
     <li><strong>Simulation & Programming:</strong> MATLAB, Simulink, Python, C, C++</li>
@@ -262,7 +266,7 @@
 <!-- CERTIFICATIONS -->
 <section id="certifications" class="section hidden">
   <h3>Licenses & Certifications</h3>
-  <ul>
+ <ul>
     <li>Six Sigma: Green Belt — LinkedIn (2026)</li>
     <li>Six Sigma Foundations — LinkedIn (2025)</li>
     <li>Lean Six Sigma: Define & Measure Tools — LinkedIn (2025)</li>
@@ -273,6 +277,7 @@
     <li>Atlassian Agile Project Management Professional Certificate — Atlassian (2026)</li>
     <li>SOLIDWORKS 2024 Essential Training — LinkedIn (2026)</li>
   </ul>
+ 
 </section>
 
 <!-- HOBBIES -->
@@ -292,11 +297,13 @@
 <footer class="footer">
   <p>
     <a href="mailto:vlokesh269@gmail.com">vlokesh269@gmail.com</a> |
-    <strong>Phone:</strong> <a href="tel:+15132598310">+1 (513) 259-8310</a> |
+    <a href="tel:+15132598310">+1 (513) 259-8310</a> |
     <a href="https://www.linkedin.com/in/lokeshreddyvadde" target="_blank">LinkedIn</a>
+    <span id="year"></span>
   </p>
 </footer>
 
 <script src="js/script.js"></script>
 </body>
 </html>
+
