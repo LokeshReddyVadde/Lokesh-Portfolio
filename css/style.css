@@ -24,12 +24,15 @@ body {
   margin: 40px 0;
 }
 
-.nav-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+.hero-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #0b1a2f;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
+
 
 .nav-grid button {
   background: #1a3a6b;
@@ -287,3 +290,4 @@ ul li ul {
     font-size: 1.3rem;
   }
 }
+
