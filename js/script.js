@@ -43,6 +43,24 @@ buttons.forEach(btn => {
   });
 });
 
+// Animate cards when section becomes visible
+function animateCards(section) {
+  const cards = section.querySelectorAll('.project-card, .activity-card');
+  cards.forEach((card, index) => {
+    setTimeout(() => card.classList.add('visible'), index * 150);
+  });
+}
+
+// Trigger animation on button click
+document.querySelectorAll('.hero-nav button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.getElementById(btn.dataset.target);
+    animateCards(target);
+  });
+});
+
+
 // Footer year
 document.getElementById('year').textContent = ` © ${new Date().getFullYear()}`;
+
 
