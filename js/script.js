@@ -1,30 +1,11 @@
-const buttons = document.querySelectorAll('.top-nav button, .hero-buttons button, .hero-nav button');
-const sections = document.querySelectorAll('.content .section');
+// Wait until DOM is fully loaded
+window.addEventListener('DOMContentLoaded', () => {
 
-// Animate timeline items
-function animateTimelineItems(section) {
-  const items = section.querySelectorAll('.timeline-item');
-  items.forEach((item, index) => {
-    setTimeout(() => {
-      item.style.opacity = '1';
-      item.style.transform = 'translateY(0)';
-    }, index * 150);
-  });
-}
+  const buttons = document.querySelectorAll('.top-nav button, .hero-buttons button, .hero-nav button');
+  const sections = document.querySelectorAll('.content .section');
 
-// Animate project/activity cards
-function animateCards(section) {
-  const cards = section.querySelectorAll('.project-card, .activity-card');
-  cards.forEach((card, index) => {
-    setTimeout(() => card.classList.add('visible'), index * 150);
-  });
-}
-
-// Show/hide sections on button click
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const targetId = btn.getAttribute('data-target');
-
+  // Show target section and hide others
+  function showSection(targetId) {
     sections.forEach(sec => {
       sec.classList.remove('visible');
       sec.classList.add('hidden');
@@ -44,31 +25,44 @@ buttons.forEach(btn => {
     const target = document.getElementById(targetId);
     if (target) {
       target.classList.remove('hidden');
+
       setTimeout(() => {
         target.classList.add('visible');
-        if (target.querySelector('.timeline')) {
-          animateTimelineItems(target);
+
+        // Animate timeline items if present
+        const timeline = target.querySelectorAll('.timeline-item');
+        if (timeline.length) {
+          timeline.forEach((item, index) => {
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, index * 150);
+          });
         }
-        animateCards(target);
+
+        // Animate project/activity cards
+        const cards = target.querySelectorAll('.project-card, .activity-card');
+        cards.forEach((card, index) => {
+          setTimeout(() => card.classList.add('visible'), index * 150);
+        });
+
       }, 50);
 
+      // Scroll smoothly to section
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  });
-});
-
-// Show hero section by default
-window.addEventListener('DOMContentLoaded', () => {
-  const hero = document.getElementById('hero');
-  hero.classList.add('visible');
-  animateCards(hero);
-  if (hero.querySelector('.timeline')) {
-    animateTimelineItems(hero);
   }
-});
 
-// Footer year
-const yearEl = document.getElementById('year');
-if (yearEl) {
-  yearEl.textContent = `© ${new Date().getFullYear()}`;
-}
+  // Attach click listeners to all buttons
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      if (targetId) showSection(targetId);
+    });
+  });
+
+  // Footer year (optional)
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = `© ${new Date().getFullYear()}`;
+
+});
